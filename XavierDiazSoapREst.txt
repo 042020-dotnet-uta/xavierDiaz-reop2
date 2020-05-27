@@ -1,0 +1,56 @@
+﻿REST and SOAP have some basic similarities in how they get their jobs done. Both use the  HTTP protocol to access and/or manipulate their desired data; but what they do with the data and the way their respective clients will make contact with an application is pretty different. SOAP is typically used with XML since all languages can use/understand it and there is no standardized way to use it that could potentially bar some languages from using it. REST is more open about what format it works with. REST APIs can use several different formats -  usually  JSON - using a uniform interface to decouple the client and server. They both have different requirements to meet their respective identities. To be considered RESTful the application must have 1) Loose Coupling (be Client Server) 2) Each request must be atomic (be stateless) 3) Responses must be labeled cacheable or non-cacheable (be cacheable) 4) Interface Generality (“not common”, but unifore interface) 5) Have a hierarchical architecture limiting components to their own layers (Layered System) 6) Optionally be able to download scripts for extension (Code on Demand).
+SOAP on the other hand requires that it has SOAP messages, their XML document be sent over HTTP. Another XML file called a web service description language (WSDL) to let the client know what the basic info about the web service and what it does and how to talk to it. Finally a Universal Description, Discover, and Integration repository where a WSDL can be published. Both REST and SOAP rely on an important and unique, to one another, concepts to organise and make use of request data. REST is a little more straightforward since it revolves around “resources”. When you look at a potential URI you can make a good guess what kind of resource you’re going to be concerning yourself with. Revature.com/associates/23 might hint that the resource is linked to an associate with ID number 23, but because of good naming practices the client won’t quite be able to guess exactly what they're messing with. If a GET HTTP request is made it will call the controller and retrieve the relevant data, assuming they have permission. The data will be serialized as a JSON and now the client can use the data. For SOAP a web service must have a WSDL made in order to start taking messages and sending things back. It must describe what it does, what it needs and what it sends back using types, message, portType, binding, and service. When it's ready to receive messages it will take in messages with a structure of an envelope ->head(optional),body(at least one). The client will after receive a message with an HTML status code, the message itself and maybe a fault if there was a problem. The client then uses this information. What’s nice about SOAP is that it doesn’t care how you send SOAP, it’s up to the developer. REST on the other hand can be used with MVC so it makes sense to use that instead.
+
+Quiz:
+SOAP
+1)how many major characteristics does SOAP have?
+	a)2
+	b)3	correct
+	c)4
+	d)5
+2)which is not a major characteristic of SOAP?
+	a)Connectivity	correct
+	b)extensibility
+	c)neutrality
+	d)independance
+3)Which best describes the ultimate receiver
+	a)The receiver that is used the most
+	b)The most complex receiver
+	c)receiver that takes all data types
+	d)The destination receiver of the SOAP message correct
+4)What is the most commonly used protocol for SOAP
+	a)SMTP
+	b)TCP
+	c)HTTP	correct
+	d)UDP
+5)SOAP can be ran on which operating systems?
+	a)Windows
+	b)Mac
+	c)Linux
+	d)any disparate OS	correct
+REST
+1)How many HTTP methods are available for REST
+	a)7
+	b)8
+	c)9	correct
+	d)10
+2)When should the Patch method be used?
+	a)to fix a prior update
+	b)to connect to a new service
+	c)to only delete a single field from a resource
+	d)to update partial resources	correct
+3)What does it mean to be idempotent?
+	a)the result of a request is independent of times executed	Correct
+	b)the result of a request is dependent of times executed
+	c)requests will use other requests to complete
+	d)requests make changes to the database
+4)what is Trace used for?
+	a)seeing who sent a request at a certain time
+	b)sends test along path to debug	correct
+	c)seeing who has updated certain data
+	d)displaying all current clients requests
+5)Which constraint is considered optional for REST
+	a)Client-Server
+	b)stateless
+	c)cacheable
+	d)code on demand	correct
