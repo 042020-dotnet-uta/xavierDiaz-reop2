@@ -1,0 +1,35 @@
+1) Which is not true for a Kubelet? https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/ https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/
+	a)Each node has a Kubelet
+	b)A Kubelet helps the manage the cluster
+	c)kuberlet works in terms of a PodSpec
+	d)A master has a kubelet 	correct
+2) Which is not a kubectl command? https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-interactive/ https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands
+	a) kubectl create
+	b) kubectl get
+	c) kubectl start	correct, you would want 'run' not 'start'
+	d) kubectl  delete
+3) Of these container runtimes which is supported in a pod? https://kubernetes.io/docs/setup/production-environment/container-runtimes/ https://kubernetes.io/docs/tutorials/kubernetes-basics/explore/explore-intro/
+	a) Docker
+	b) CRI-O
+	c) Containerd
+	d) All above		correct, docker is most popular
+4) A Kubernetes service can be defined using what? https://kubernetes.io/docs/tutorials/kubernetes-basics/expose/expose-intro/
+	a) Only YAML
+	b) YAML, JSON		correct
+	c) XML, JSON
+	d) YAML, XML
+5) How do you scale down service replicas after setting them already? https://kubernetes.io/docs/tutorials/kubernetes-basics/scale/scale-interactive/
+	a) Can't be done after initial scaling
+	b) use scale and provide a different number	correct
+	c) remove services, then set new replicas
+	d) reset deployment, remove services then set new replicas
+6) What is a rolling update not used for? https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/
+	a) Demote an applucation	correct
+	b) Promote an application from one environment to another
+	c) Rollback to previous versions
+	d) Continuous Integration and Continuous Delivery of applications with zero downtime
+7) Which isn't a Minikube operation? from slide 20 of PDF
+	a) start
+	b) request
+	c) status
+	d) delete
